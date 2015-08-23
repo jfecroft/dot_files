@@ -149,6 +149,5 @@ function makezip() { zip -r "${1%%/}.zip" "$1" ; }
 # Make your directories and files access rights sane.
 function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ;}
 
-
 # bash autocompletion
 source ~/.git-completion.bash
