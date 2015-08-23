@@ -4,7 +4,7 @@
 [core]
   # editor = nano
   editor = vim
-	excludesfile = /Users/jfecroft/.gitignore_global
+  excludesfile = ~/.gitignore_global
   # or editor = emacs
 [color]
   ui = true
