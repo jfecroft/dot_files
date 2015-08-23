@@ -37,3 +37,6 @@ set expandtab
 
 " fix backspace
 set backspace=indent,eol,start
+
+" strip whitespace on save
+autocmd BufWritePre *.py :%s/\s\+$//e
