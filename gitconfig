@@ -1,0 +1,23 @@
+[user]
+  name = jfecroft
+  email = j.f.e.croft@gmail.com
+[core]
+  # editor = nano
+  editor = vim
+	excludesfile = /Users/jfecroft/.gitignore_global
+  # or editor = emacs
+[color]
+  ui = true
+[alias]
+  st = status
+  cia = commit -a
+  co = checkout
+  br = branch
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  visual = !gitk
+  dh = diff HEAD^ HEAD
+[credential]
+  helper = cache
+[push]
+  default = simple
