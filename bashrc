@@ -6,15 +6,23 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific aliases and functions
-export HISTCONTROL=ignoreboth:erasedups   # no duplicate entries
-shopt -s histappend                       # append history file
-export HISTFILESIZE=50
 alias merge='gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=merged.pdf '
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 alias vi=vim
 bind 'set match-hidden-files off'
-#alias tmux=tmux source-file ~/.tmux.conf
+
+
+#-------------------
+# Bash History
+#-------------------
+
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export HISTSIZE=100000                   # big big history
+export HISTFILESIZE=100000               # big big history
+shopt -s histappend                      # append to history, don't overwrite it
+# Save and reload the history after each command finishes
+# export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 #============================================================
 #
