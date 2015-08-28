@@ -17,6 +17,8 @@
   last = log -1 HEAD
   visual = !gitk
   dh = diff HEAD^ HEAD
+  # wipe commits all changes then resets to previous - now in reflog
+  wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
 [credential]
   helper = cache
 [push]
