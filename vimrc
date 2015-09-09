@@ -6,6 +6,7 @@
 let mapleader = ";"
 
 " load Pathogen stuff
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 """ Custom Configs include.
