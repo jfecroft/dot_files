@@ -30,6 +30,7 @@ set formatoptions=qrn1
 set colorcolumn=80
 
 " tabbing
+filetype plugin indent on
 " use vimsleuth instead
 "set tabstop=4
 "set shiftwidth=4
