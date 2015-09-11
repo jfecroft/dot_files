@@ -3,7 +3,7 @@
 " in this configuration; I prefer to use ; for <Leader> since it's right on
 " the home row, but change it as you prefer and all the keybindings will be
 " updated appropriately.
-let mapleader = ";"
+let mapleader = "\\"
 
 " load Pathogen stuff
 runtime bundle/vim-pathogen/autoload/pathogen.vim
