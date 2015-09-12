@@ -8,7 +8,6 @@ fi
 # User specific aliases and functions
 alias merge='gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=merged.pdf '
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
-export PATH="$HOME/Library/Haskell/bin:$PATH"
 alias vi=vim
 bind 'set match-hidden-files off'
 
