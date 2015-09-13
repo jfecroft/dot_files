@@ -20,6 +20,9 @@
   # wipe commits all changes then resets to previous - now in reflog
   wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
   wip = commit -am "WIP"
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  le = log --oneline --decorate
 [credential]
   helper = cache
 [push]
