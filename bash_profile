@@ -13,3 +13,7 @@ export PATH
 # The original is in /usr/bin/vim
 PATH="/opt/local/bin:${PATH}"
 export PATH
+
+# aws completion
+complete -C '/usr/local/bin/aws_completer ' aws
+export PATH=/usr/local/aws/bin:$PATH
