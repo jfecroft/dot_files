@@ -15,9 +15,6 @@ source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.
 
 alias vi=vim
 
-# dont tab complete hidden files
-bind 'set match-hidden-files off'
-
 
 #-------------------
 # Bash History
