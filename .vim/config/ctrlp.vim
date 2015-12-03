@@ -8,3 +8,5 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 let g:ctrlp_cmd = 'CtrlPMixed'
+
+let g:ctrlp_max_files = -1

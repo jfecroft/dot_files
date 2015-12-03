@@ -1,0 +1,29 @@
+[user]
+  name = jfecroft
+  email = j.f.e.croft@gmail.com
+[core]
+  # editor = nano
+  editor = vim
+  excludesfile = ~/.gitignore_global
+  # or editor = emacs
+[color]
+  ui = true
+[alias]
+  st = status
+  cia = commit -a
+  co = checkout
+  br = branch
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  visual = !gitk
+  dh = diff HEAD^ HEAD
+  # wipe commits all changes then resets to previous - now in reflog
+  wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+  wip = commit -am "WIP"
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  le = log --oneline --decorate
+[credential]
+  helper = cache
+[push]
+  default = simple
