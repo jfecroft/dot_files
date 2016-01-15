@@ -6,8 +6,8 @@
 
 ########## Variables
 
-dir=~/dot_files                    # dotfiles directory
-olddir=~/dot_files_old             # old dotfiles backup directory
+dir=$PWD                   # dotfiles directory
+olddir=~/dir/dot_files_old             # old dotfiles backup directory
 files="bashrc vimrc vim gitconfig git-completion.bash tmux.conf gitignore_global bash_profile config"    # list of files/folders to symlink in homedir
 
 ##########
