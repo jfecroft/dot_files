@@ -43,3 +43,4 @@ set backspace=indent,eol,start
 " strip whitespace on save
 autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePre *.hs :%s/\s\+$//e
+autocmd BufWritePre *.f :%s/\s\+$//e
