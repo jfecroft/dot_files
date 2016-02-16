@@ -13,7 +13,11 @@ alias merge='gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=merged.pdf '
 alias find_dups='ind -not -empty -type f -printf "%s\n" | sort -rn | uniq -d | xargs -I{} -n1 find -type f -size {}c -print0 | xargs -0 md5sum | sort | uniq -w32 --all-repeated=separate'
 
 # powerline
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+# source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+source /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh
+
+PYTHONPATH=~/.local
+export PYTHONPATH
 
 alias vi=vim
 
