@@ -47,9 +47,13 @@ shopt -s histappend                      # append to history, don't overwrite it
 # Personnal Aliases
 #-------------------
 
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    alias rm='rm -I'
+else
+    alias rm='rm -i'
+fi
+    alias cp='cp -i'
+    alias mv='mv -i'
 # -> Prevents accidentally clobbering files.
 alias mkdir='mkdir -p'
 
