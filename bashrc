@@ -100,6 +100,13 @@ function ff() { find . -type f -iname '*'"$*"'*' -ls ; }
 function fe() { find . -type f -iname '*'"${1:-}"'*' \
 -exec ${2:-file} {} \;  ; }
 
+# Find a files which match pattern $1 and append $2 
+function fa() {
+suffix=$1
+shift
+for f in $@; do mv -v -- "$f" "$f.$suffix"; done
+}
+
 #  Find a pattern in a set of files and highlight them:
 #+ (needs a recent version of egrep).
 function fstr()
