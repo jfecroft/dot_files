@@ -9,6 +9,9 @@ fi
 PATH=$PATH:$HOME/bin
 export PATH
 
+PATH=$PATH:$HOME/.local
+export PATH
+
 # Setting the path for updated vim 7.4
 # The original is in /usr/bin/vim
 PATH="/opt/local/bin:${PATH}"
