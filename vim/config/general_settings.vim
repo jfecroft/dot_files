@@ -9,7 +9,7 @@ filetype plugin on
 " jk to escape insert mode  
 inoremap jk <esc>
 " avoid the need to shift
-nnoremap ; :
+"nnoremap ; :
 " backspace behaves normally
 set backspace=indent,eol,start
 

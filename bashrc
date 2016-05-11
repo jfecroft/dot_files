@@ -47,10 +47,14 @@ shopt -s histappend                      # append to history, don't overwrite it
 # Personnal Aliases
 #-------------------
 
-alias rm='rm -I'
-alias cp='cp -i'
-alias mv='mv -i'
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
 # -> Prevents accidentally clobbering files.
+    alias rm='rm -I'
+else
+    alias rm='rm -i'
+fi
+    alias cp='cp -i'
+    alias mv='mv -i'
 alias mkdir='mkdir -p'
 
 alias h='history'
@@ -95,6 +99,13 @@ function ff() { find . -type f -iname '*'"$*"'*' -ls ; }
 # Find a file with pattern $1 in name and Execute $2 on it:
 function fe() { find . -type f -iname '*'"${1:-}"'*' \
 -exec ${2:-file} {} \;  ; }
+
+# Find a files which match pattern $1 and append $2 
+function fa() {
+suffix=$1
+shift
+for f in $@; do mv -v -- "$f" "$f.$suffix"; done
+}
 
 #  Find a pattern in a set of files and highlight them:
 #+ (needs a recent version of egrep).
@@ -168,3 +179,5 @@ function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ;}
 
 # bash autocompletion
 source ~/.git-completion.bash
+# brew autocompletion
+source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
