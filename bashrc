@@ -47,7 +47,7 @@ shopt -s histappend                      # append to history, don't overwrite it
 # Personnal Aliases
 #-------------------
 
-alias rm='rm -i'
+alias rm='rm -I'
 alias cp='cp -i'
 alias mv='mv -i'
 # -> Prevents accidentally clobbering files.
