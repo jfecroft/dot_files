@@ -20,6 +20,7 @@ PYTHONPATH=~/.local
 export PYTHONPATH
 
 alias vi=vim
+source $HOME/fastcd/set.sh
 
 
 #-------------------
@@ -46,6 +47,14 @@ shopt -s histappend                      # append to history, don't overwrite it
 #-------------------
 # Personnal Aliases
 #-------------------
+
+alias cd="pushd"
+alias bd="popd"
+alias cd..="cd .."
+alias cd...="cd ../.."
+alias cd....="cd ../.."
+alias cd.....="cd ../../.."
+alias cd......="cd ../../../.."
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 # -> Prevents accidentally clobbering files.
@@ -180,4 +189,4 @@ function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ;}
 # bash autocompletion
 source ~/.git-completion.bash
 # brew autocompletion
-source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
+#source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
