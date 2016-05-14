@@ -48,8 +48,8 @@ shopt -s histappend                      # append to history, don't overwrite it
 # Personnal Aliases
 #-------------------
 
-alias cd="pushd"
-alias bd="popd"
+#alias cd="pushd"
+#alias bd="popd"
 alias cd..="cd .."
 alias cd...="cd ../.."
 alias cd....="cd ../.."
