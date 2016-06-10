@@ -14,7 +14,9 @@ alias find_dups='ind -not -empty -type f -printf "%s\n" | sort -rn | uniq -d | x
 
 # powerline
 # source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
-source /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh
+if [ -e /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh ]; then
+    source /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh
+fi
 
 PYTHONPATH=~/.local
 export PYTHONPATH
