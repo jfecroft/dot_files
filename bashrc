@@ -20,7 +20,6 @@ PYTHONPATH=~/.local
 export PYTHONPATH
 
 alias vi=vim
-source $HOME/fastcd/set.sh
 
 
 #-------------------
