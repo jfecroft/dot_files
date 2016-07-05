@@ -63,8 +63,8 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 else
     alias rm='rm -i'
 fi
-    alias cp='cp -i'
-    alias mv='mv -i'
+alias cp='cp -i'
+alias mv='mv -i'
 alias mkdir='mkdir -p'
 
 alias h='history'
