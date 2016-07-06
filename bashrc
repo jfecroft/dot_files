@@ -12,6 +12,12 @@ alias merge='gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=merged.pdf '
 #list all duplicate files
 alias find_dups='ind -not -empty -type f -printf "%s\n" | sort -rn | uniq -d | xargs -I{} -n1 find -type f -size {}c -print0 | xargs -0 md5sum | sort | uniq -w32 --all-repeated=separate'
 
+cpom(){
+# as cp but one to many rather than many to one
+src=$1
+shift
+for target in $@; do cp -v $src "$target"; done
+}
 # powerline
 # source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 if [ -e /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh ]; then
