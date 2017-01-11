@@ -13,7 +13,8 @@ inoremap jk <esc>
 " backspace behaves normally
 set backspace=indent,eol,start
 
-syntax enable
+let fortran_free_source=1
+syntax on
 " wildmenu (vim command line completion)
 set wildmenu
 set wildmode=list:longest
