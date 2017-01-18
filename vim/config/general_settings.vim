@@ -51,3 +51,7 @@ autocmd BufWritePre *.hs :%s/\s\+$//e
 autocmd BufWritePre *.f :%s/\s\+$//e
 autocmd BufWritePre *.tex :%s/\s\+$//e
 autocmd BufWritePre *.bib :%s/\s\+$//e
+
+" syntax highlight whole file can slow things down
+" seems to be needed for latex files especially
+autocmd BufEnter * :syntax sync fromstart
