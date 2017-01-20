@@ -23,6 +23,8 @@ PATH="/opt/local/bin:${PATH}"
 export PATH
 PATH="${PATH}:~/bin"
 export PATH
+PATH="/Library/TeX/Root/bin/x86_64-darwin:${PATH}"
+export PATH
 
 # aws completion
 complete -C '/usr/local/bin/aws_completer ' aws
