@@ -13,7 +13,8 @@ inoremap jk <esc>
 " backspace behaves normally
 set backspace=indent,eol,start
 
-syntax enable
+let fortran_free_source=1
+syntax on
 " wildmenu (vim command line completion)
 set wildmenu
 set wildmode=list:longest
@@ -50,3 +51,7 @@ autocmd BufWritePre *.hs :%s/\s\+$//e
 autocmd BufWritePre *.f :%s/\s\+$//e
 autocmd BufWritePre *.tex :%s/\s\+$//e
 autocmd BufWritePre *.bib :%s/\s\+$//e
+
+" syntax highlight whole file can slow things down
+" seems to be needed for latex files especially
+autocmd BufEnter * :syntax sync fromstart
