@@ -196,6 +196,7 @@ function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ;}
 # bash autocompletion
 source ~/.git-completion.bash
 # brew autocompletion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
+type brew &> /dev/null
+if [ $? == 0 ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
