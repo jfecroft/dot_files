@@ -30,6 +30,7 @@ export PYTHONPATH
 alias vi=vim
 
 
+
 #-------------------
 # Bash History
 #-------------------
