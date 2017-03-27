@@ -20,8 +20,15 @@ for target in $@; do cp -v $src "$target"; done
 }
 # powerline
 # source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
-if [ -e /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh ]; then
-    source /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh
+#if [ -e /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh ]; then
+#    source /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh
+#fi
+if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+   __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+   source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+elif [-f "~/repos/bash-git-prompt/gitprompt.sh"]; then
+   GIT_PROMPT_ONLY_IN_REPO=1
+   source ~/repos/bash-git-prompt/gitprompt.sh
 fi
 
 PYTHONPATH=~/.local
