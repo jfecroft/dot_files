@@ -25,7 +25,8 @@ for target in $@; do cp -v $src "$target"; done
 #fi
 if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
    # doesnt work right now on ccreek
-   GIT_PROMPT_ONLY_IN_REPO=1
+   #GIT_PROMPT_ONLY_IN_REPO=1
+   GIT_PROMPT_STATUS_COMMAND=gitstatus_pre-1.7.10.sh
    source ~/.bash-git-prompt/gitprompt.sh
 elif [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
    __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
