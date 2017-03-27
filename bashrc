@@ -23,12 +23,11 @@ for target in $@; do cp -v $src "$target"; done
 #if [ -e /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh ]; then
 #    source /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh
 #fi
-if [ -f ~/repos/bash-git-prompt/gitprompt.sh ]; then
-   echo here
+if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
+   # doesnt work right now on ccreek
    GIT_PROMPT_ONLY_IN_REPO=1
-   source ~/repos/bash-git-prompt/gitprompt.sh
+   source ~/.bash-git-prompt/gitprompt.sh
 elif [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
-   echo else
    __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
    source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
 fi
