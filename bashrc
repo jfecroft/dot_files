@@ -6,6 +6,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific aliases and functions
+stty -ixon #allows ctrl-s to forward search  rather than crtl-s to send pause
 
 # merge multiple pdfs into one
 alias merge='gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=merged.pdf '
