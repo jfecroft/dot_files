@@ -1,0 +1,7 @@
+tap "homebrew/bundle"
+tap "homebrew/core"
+brew "bash-completion"
+brew "ctags"
+brew "curl"
+brew "ispell"
+brew "the_silver_searcher"
