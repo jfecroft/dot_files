@@ -53,6 +53,7 @@ set backspace=indent,eol,start
 "autocmd BufWritePre *.bib :%s/\s\+$//e
 
 autocmd BufRead,BufNewFile *.tex setlocal spell
+autocmd BufRead,BufNewFile *.md setlocal spell
 
 " syntax highlight whole file can slow things down
 " seems to be needed for latex files especially
