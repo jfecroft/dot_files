@@ -27,3 +27,5 @@ export PATH=/usr/local/aws/bin:$PATH
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 export PATH="/usr/local/bin:$PATH"
+
+export PATH="${HOME}/Library/Python/2.7/bin:$PATH"
