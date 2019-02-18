@@ -29,3 +29,9 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 export PATH="/usr/local/bin:$PATH"
 
 export PATH="${HOME}/Library/Python/2.7/bin:$PATH"
+
+# Move next only if `homebrew` is installed
+if command -v brew >/dev/null 2>&1; then
+	# Load rupa's z if installed
+	[ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
+fi
