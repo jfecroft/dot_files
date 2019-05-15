@@ -21,14 +21,14 @@ export PATH
 PATH="/Library/TeX/Root/bin/x86_64-darwin:${PATH}"
 export PATH
 
-# aws completion
-complete -C '/usr/local/bin/aws_completer ' aws
-export PATH=/usr/local/aws/bin:$PATH
+## aws completion
+#complete -C '/usr/local/bin/aws_completer ' aws
+#export PATH=/usr/local/aws/bin:$PATH
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 export PATH="/usr/local/bin:$PATH"
 
-export PATH="${HOME}/Library/Python/2.7/bin:$PATH"
+#export PATH="${HOME}/Library/Python/2.7/bin:$PATH"
 
 # Move next only if `homebrew` is installed
 if command -v brew >/dev/null 2>&1; then
