@@ -6,6 +6,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific aliases and functions
+stty -ixon #allows ctrl-s to forward search  rather than crtl-s to send pause
 
 # merge multiple pdfs into one
 alias merge='gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=merged.pdf '
@@ -26,10 +27,12 @@ for target in $@; do cp -v $src "$target"; done
 if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
    # doesnt work right now on ccreek
    #GIT_PROMPT_ONLY_IN_REPO=1
+   GIT_PROMPT_FETCH_REMOTE_STATUS=0
    GIT_PROMPT_THEME=Single_line_Solarized
    GIT_PROMPT_STATUS_COMMAND=gitstatus_pre-1.7.10.sh
    source ~/.bash-git-prompt/gitprompt.sh
 elif [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+   GIT_PROMPT_FETCH_REMOTE_STATUS=0
    GIT_PROMPT_THEME=Single_line_Solarized
    __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
    source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
@@ -212,3 +215,4 @@ type brew &> /dev/null
 if [ $? == 0 ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
+. /usr/local/etc/profile.d/z.sh

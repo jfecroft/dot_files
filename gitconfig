@@ -9,7 +9,7 @@
 [color]
   ui = true
 [alias]
-  st = status
+  st = status -uno
   cia = commit -a
   co = checkout
   br = branch
@@ -26,4 +26,4 @@
 [credential]
   helper = cache
 [push]
-  default = simple
+  default = simple 
