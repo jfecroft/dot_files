@@ -13,10 +13,15 @@ insert_final_newline = true
 [*.{js,py}]
 charset = utf-8
 
+[*.tex]
+indent_style = space
+trim_trailing_whitespace = true
+indent_size = 2
+
 # 4 space indentation
 [*.py]
 indent_style = space
-trim_trailing_whitespace = true
+trim_trailing_whitespace = true 
 indent_size = 4
 
 # Tab indentation (no size specified)
