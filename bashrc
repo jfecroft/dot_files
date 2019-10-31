@@ -24,19 +24,19 @@ for target in $@; do cp -v $src "$target"; done
 #if [ -e /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh ]; then
 #    source /Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh
 #fi
-if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
-   # doesnt work right now on ccreek
-   #GIT_PROMPT_ONLY_IN_REPO=1
-   GIT_PROMPT_FETCH_REMOTE_STATUS=0
-   GIT_PROMPT_THEME=Single_line_Solarized
-   GIT_PROMPT_STATUS_COMMAND=gitstatus_pre-1.7.10.sh
-   source ~/.bash-git-prompt/gitprompt.sh
-elif [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
-   GIT_PROMPT_FETCH_REMOTE_STATUS=0
-   GIT_PROMPT_THEME=Single_line_Solarized
-   __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
-   source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
-fi
+#if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
+#   # doesnt work right now on ccreek
+#   #GIT_PROMPT_ONLY_IN_REPO=1
+#   GIT_PROMPT_FETCH_REMOTE_STATUS=0
+#   GIT_PROMPT_THEME=Single_line_Solarized
+#   GIT_PROMPT_STATUS_COMMAND=gitstatus_pre-1.7.10.sh
+#   source ~/.bash-git-prompt/gitprompt.sh
+#elif [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+#   GIT_PROMPT_FETCH_REMOTE_STATUS=0
+#   GIT_PROMPT_THEME=Single_line_Solarized
+#   __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+#   source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+#fi
 
 PYTHONPATH=~/.local
 export PYTHONPATH
@@ -215,4 +215,13 @@ type brew &> /dev/null
 if [ $? == 0 ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
-. /usr/local/etc/profile.d/z.sh
+#. /usr/local/etc/profile.d/z.sh
+
+# if `homebrew` is installed use rupas z - https://github.com/rupa/z
+if command -v brew >/dev/null 2>&1; then
+	# Load rupa's z if installed
+	[ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
+fi
+
+# use starship prompt-https://starship.rs
+eval "$(starship init bash)"
