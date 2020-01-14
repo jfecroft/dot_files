@@ -37,9 +37,6 @@
 [submodule "vim/bundle/vim-gitgutter"]
 	path = vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
-[submodule "vim/bundle/vim-easytags"]
-	path = vim/bundle/vim-easytags
-	url = https://github.com/xolox/vim-easytags.git
 [submodule "vim/bundle/vim-misc"]
 	path = vim/bundle/vim-misc
 	url = https://github.com/xolox/vim-misc.git
