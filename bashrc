@@ -105,7 +105,7 @@ alias df='df -kTh'
 # The 'ls' family (this assumes you use a recent GNU ls).
 #-------------------------------------------------------------
 # Add colors for filetype and  human-readable sizes by default on 'ls':
-alias ls='ls -h'
+alias ls='ls -hF'
 alias lx='ls -lXB'         #  Sort by extension.
 alias lk='ls -lSr'         #  Sort by size, biggest last.
 alias lt='ls -ltr'         #  Sort by date, most recent last.
