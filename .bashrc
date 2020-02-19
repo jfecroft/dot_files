@@ -119,6 +119,9 @@ alias lr='ll -R'           #  Recursive ls.
 alias la='ll -A'           #  Show hidden files.
 alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 
+# config file git
+alias jfeconfig='git --git-dir="${HOME}/.dot_files" --work-tree="${HOME}"'
+
 #-------------------------------------------------------------
 # File & strings related functions:
 #-------------------------------------------------------------
