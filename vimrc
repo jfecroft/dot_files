@@ -5,9 +5,32 @@
 " updated appropriately.
 let mapleader = "\\"
 
-" load Pathogen stuff
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
+" Plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'hynek/vim-python-pep8-indent'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-sleuth'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-pathogen'
+Plug 'sjl/gundo.vim'
+Plug 'majutsushi/tagbar'
+Plug 'Raimondi/delimitMate'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'xolox/vim-misc'
+Plug 'ervandew/supertab'
+Plug 'justinmk/vim-sneak'
+Plug 'kshenoy/vim-signature'
+Plug 'dracula/vim'
+Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'ctrlpvim/ctrlp.vim'
+
+call plug#end()
 
 """ Custom Configs include.
 " All custom config settings are stored in the .vim/config folder to
