@@ -54,6 +54,7 @@ set backspace=indent,eol,start
 
 autocmd BufRead,BufNewFile *.tex setlocal spell
 autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.txt setlocal spell
 autocmd BufRead,BufNewFile COMMIT_EDITMSG setlocal spell
 
 " syntax highlight whole file can slow things down
