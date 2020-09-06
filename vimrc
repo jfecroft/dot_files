@@ -23,6 +23,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-sensible'
 Plug 'justinmk/vim-sneak'
+Plug 'drmingdrmer/xptemplate'
 
 call plug#end()
 
