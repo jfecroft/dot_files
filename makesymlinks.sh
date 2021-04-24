@@ -8,7 +8,7 @@
 
 dir=$PWD                   # dotfiles directory
 olddir=~/dot_files_old             # old dotfiles backup directory
-files="bashrc vimrc vim gitconfig git-completion.bash tmux.conf gitignore_global bash_profile config editorconfig"    # list of files/folders to symlink in homedir
+files="bashrc vimrc vim gitconfig git-completion.bash tmux.conf gitignore_global bash_profile config editorconfig todo.cfg"    # list of files/folders to symlink in homedir
 
 ##########
 
