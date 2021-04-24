@@ -42,6 +42,7 @@ PYTHONPATH=~/.local
 export PYTHONPATH
 
 alias vi=vim
+alias todo=todo.sh
 
 
 
