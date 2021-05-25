@@ -45,6 +45,7 @@ alias vi=vim
 alias todo=todo.sh
 
 
+eval "$(pyenv init -)"
 
 #-------------------
 # Bash History
