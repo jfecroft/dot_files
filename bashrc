@@ -5,7 +5,12 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [ -f /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -f /usr/local/homebrew/bin/brew ]; then
+  eval "$(/usr/local/homebrew/bin/brew shellenv)"
+  echo "here"
+fi
 ## User specific environment and startup programs
 #PATH=$PATH:$HOME/bin
 #export PATH
