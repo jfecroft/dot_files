@@ -12,7 +12,7 @@ disabled = true
 
 [git_branch]
 symbol = ""
-truncation_length = "7"
+truncation_length = 7
 truncation_symbol = ""
 
 format = """\
