@@ -14,7 +14,6 @@ Plug 'sjl/gundo.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'ervandew/supertab'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -24,6 +23,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-sensible'
 Plug 'justinmk/vim-sneak'
 Plug 'drmingdrmer/xptemplate'
+Plug 'ervandew/supertab', { 'commit': 'a9dab766e0efd30eeb133d348c5381d67222697a' }
 
 call plug#end()
 
